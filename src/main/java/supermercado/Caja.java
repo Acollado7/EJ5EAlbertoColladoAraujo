@@ -10,9 +10,9 @@ public class Caja {
     private static int id = 0;
 
     //Constructor
-    public Caja () {
+    public Caja(Cinta cinta) {
         this.numIdentificador = id++;
-        this.productos = new Cinta();
+        this.productos = cinta;
     }
     //Getters y Setters
 
@@ -75,4 +75,10 @@ public class Caja {
         return "Caja{" + "numIdentificador=" + numIdentificador + ", productos=" + productos + '}';
     }
 
+    public Ticket generarTicket() {
+
+        Ticket t = new Ticket(this.productos);
+
+        return t;
+    }
 }

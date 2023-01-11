@@ -7,8 +7,7 @@ public class Cinta {
     private ArrayList<Producto> productos;
 
     public Cinta() {
-        //Creamos el constructor de la clase cinta
-        this.productos = new ArrayList<Producto>();
+        this.productos = new ArrayList<>();
     }
 
     public ArrayList<Producto> getProductos() {
@@ -62,6 +61,9 @@ public class Cinta {
     public String toString() {
         return "Cinta{" + "cinta=" + productos + '}';
     }
+
+
+
 
 
 }
