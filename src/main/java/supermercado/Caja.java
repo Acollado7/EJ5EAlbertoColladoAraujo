@@ -16,39 +16,40 @@ public class Caja {
     }
     //Getters y Setters
 
-    public  int getNumIdentificador() {
+    public int getNumIdentificador() {
         return numIdentificador;
     }
 
-    public void setNumIdentificador (int numIdentificador) {
+    public void setNumIdentificador(int numIdentificador) {
         this.numIdentificador = numIdentificador;
     }
 
     public Cinta getCinta() {
         return productos;
     }
-     public void setCinta(Cinta productos) {
-         this.productos = productos;
 
-     }
+    public void setCinta(Cinta productos) {
+        this.productos = productos;
 
-     public static int getId() {
-         return id;
-     }
+    }
 
-        public static void setId(int id) {
-            Caja.id = id;
-        }
+    public static int getId() {
+        return id;
+    }
 
-        //insertamos hashCode y equals
+    public static void setId(int id) {
+        Caja.id = id;
+    }
 
-        @Override
-        public int hashCode() {
-            int hash = 3;
-            hash = 79 * hash + this.numIdentificador;
-            hash = 79 * hash + Objects.hashCode(this.productos);
-            return hash;
-        }
+    //insertamos hashCode y equals
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + this.numIdentificador;
+        hash = 79 * hash + Objects.hashCode(this.productos);
+        return hash;
+    }
 
     @Override
     public boolean equals(Object obj) {
@@ -81,4 +82,25 @@ public class Caja {
 
         return t;
     }
+
+    //creamos un metodo para añadir productos
+
+    public void addProducto(Producto producto){
+        this.productos.addProducto(producto);
+    }
+
+    //creamos un metodo para eliminar productos
+
+    public void removeProducto(Producto producto){
+        this.productos.removeProducto(producto);
+    }
+
+    //creamos un metodo que nos diga si la cinta esta vacia
+
+    public boolean vacia(){
+        return this.productos.vacia();
+    }
+
+
+
 }

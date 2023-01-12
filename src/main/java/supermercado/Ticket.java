@@ -21,9 +21,19 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "fecha=" + fecha +
-                ", cinta=" + cinta +
-                '}';
+        return "-------------------------------------------------------------------------------------\n" +
+                "                            Supermercados El Tarifa\n" +
+                "Fecha: " + fecha.getDayOfMonth() +"/"+ fecha.getMonthValue() +"/"+ fecha.getYear() +  "                             Hora:" +  fecha.getHour() +":"+ fecha.getMinute() +"\n" +
+                "-------------------------------------------------------------------------------------\n" +
+                "Producto     Precio     Cantidad      IVA      Precio sin IVA\n" +
+                "--------------------------------------------------------------------------------------\n" +
+                cinta.generarLista() +
+               "-------------------------------------------------------------------------------------\n" +
+                cinta.generarStringTotal() +
+                "------------------------------------------------------------------------------------\n";
     }
+
+
 }
+
+

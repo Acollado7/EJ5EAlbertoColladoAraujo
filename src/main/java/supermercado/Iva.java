@@ -5,9 +5,9 @@ public enum Iva {
     //Por lo cual creamos una clase Enum para que nos permita tener los diferentes tipos de IVA
 
     //Creamos los diferentes tipos de IVA
-    IVA4(0.04),
-    IVA10(0.10),
-    IVA21(0.21);
+    IVA4(4),
+    IVA10(10),
+    IVA21(21);
 
     //Creamos un atributo privado para que no se pueda modificar
     private final double valor;
