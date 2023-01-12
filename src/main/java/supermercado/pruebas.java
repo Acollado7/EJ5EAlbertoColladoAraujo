@@ -18,6 +18,18 @@ public class pruebas {
         Caja caja = new Caja(new Cinta(productos));
         System.out.println(generarTicket(caja));
 
+        //Usamos el metodo addProducto para añadir un producto a la lista
+        caja.addProducto(new Producto("Agua", 1.5, 2, Iva.IVA21.getValor()));
+        System.out.println(generarTicket(caja));
+
+        //Usamos el metodo removeProducto para eliminar un producto de la lista
+        caja.removeProducto(new Producto("Agua", 1.5, 2, Iva.IVA21.getValor()));
+        System.out.println(generarTicket(caja));
+
+        //Usamos el metodo vacia para comprobar si la cinta esta vacia
+        System.out.println("¿Esta vacia la caja?  " + caja.vacia());
+
+
     }
     //Creamos un método para que nos genere el ticket
     public static Ticket generarTicket(Caja caja ) {
